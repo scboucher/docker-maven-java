@@ -1,6 +1,6 @@
 FROM    buildpack-deps:curl
 MAINTAINER Samuel Boucher
-LABEL description="Basis for 8D bots" version="0.1"
+LABEL description="Basis for Java, Maven app" version="0.1"
 ENV MAVEN_TAR="apache-maven-3.3.3-bin.tar.gz" \
     JDK8_TAR="jdk-8u45-linux-x64.tar.gz" \
     JDK7_TAR="jdk-7u79-linux-x64.tar.gz"
