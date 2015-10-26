@@ -13,7 +13,7 @@ ENV MAVEN_URL="http://apache.mirror.iweb.ca/maven/maven-3/3.3.3/binaries/${MAVEN
     PATH=${JAVA_HOME}/bin:/usr/local/maven/maven-3.3.3/bin:${PATH}
 
 WORKDIR /opt
-RUN apt-get update -y && apt-get-install tmux rsync vim -y
+RUN apt-get update -y && apt-get-install tmux vim -y
  && wget -q ${MAVEN_URL} \
  &&  wget -q --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  ${JDK8_URL} \
  &&  wget -q --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  ${JDK7_URL} \
