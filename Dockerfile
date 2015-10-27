@@ -1,6 +1,6 @@
 FROM    buildpack-deps:curl
 MAINTAINER Samuel Boucher
-LABEL description="Basis for Java, Maven app" version="0.1"
+LABEL description="Basis for Java App" version="8u65"
 ENV JDK8_TAR="jdk-8u65-linux-x64.tar.gz" \
     JCE_ZIP="jce_policy-8.zip"\
     JAVA_HOME=/usr/local/jvm/latest8
@@ -20,5 +20,4 @@ RUN apt-get update -qq -y && apt-get -qq install tmux rsync vim unzip -y \
  && mkdir jvm \
  && cd -\
  && ln -s /opt/jdk1.8.0_65 /usr/local/jvm/latest8\
- && mkdir $JAVA_HOME/lib/security/ \
- && cp UnlimitedJCEPolicyJDK8/local_policy.jar $JAVA_HOME/lib/security/
+ && cp UnlimitedJCEPolicyJDK8/* $JAVA_HOME/jre/lib/security/
