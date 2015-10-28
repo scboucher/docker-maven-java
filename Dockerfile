@@ -20,4 +20,5 @@ RUN apt-get update -qq -y && apt-get -qq install tmux rsync vim unzip -y \
  && mkdir jvm \
  && cd -\
  && ln -s /opt/jdk1.8.0_65 /usr/local/jvm/latest8\
- && cp UnlimitedJCEPolicyJDK8/* $JAVA_HOME/jre/lib/security/
+ && cp UnlimitedJCEPolicyJDK8/* $JAVA_HOME/jre/lib/security/ \
+ &&  && rm -rf /var/lib/apt/lists/*
