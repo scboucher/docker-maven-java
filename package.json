@@ -1,0 +1,25 @@
+{
+  "name": "docker-maven-java",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Meta package to test and run Docker",
+  "main": "Dockerfile",
+  "scripts": {
+    "test": "docker build -t \"test\" .",
+    "start": "docker run -i -t --rm --name test test bash",
+    "java": "docker run -i -t --rm --name test test java -version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scboucher/docker-maven-java.git"
+  },
+  "keywords": [
+    "Docker"
+  ],
+  "author": "Samuel Boucher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scboucher/docker-maven-java/issues"
+  },
+  "homepage": "https://github.com/scboucher/docker-maven-java#readme"
+}
